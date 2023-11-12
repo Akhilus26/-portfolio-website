@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akhil</title>
+    <link rel="icon" href="https://assets.stickpng.com/thumbs/585e4beacb11b227491c3399.png" type="image/icon type">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header" id="header">
+        <div class="home-container">
+            <nav>
+                <a  href="./index.html">
+                    <h1><span>A</span>KHIL</h1>
+                </a>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="header-txt">
+                <p>Python/Django Developer</p>
+                <h1 class="header-text-hi"> Hi,</h1> <h1 class="header-txt-2"> I'am <span>Akhil</span> <br> From India </h1>
+            </div>
+        </div>
+    </div>
+    <!-------------------- About part --------------------->
+    <div class="about" id="about">
+        <div class="about-container">
+            <h1>About Me</h1>>
+        </div>
+        <div class="about-content-text">
+            <div class="about-text">
+                <p>I am an aspiring Python/Django developer with a strong passion for web development and a deep desire to build a career in this exciting field. While I may be a newcomer to the  industry, my enthusiasm, dedication, and willingness to learn are what drive me forward.</p>
+            </div>
+            
+            <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                <p class="tab-links"onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills" >
+                <ul> 
+                    <li><span>Django</span> <br> Proficient in Django, including models, views, templates, and ORM.</li> 
+                    <li><span>Python</span> <br> Strong proficiency in Python</li> 
+                    <li><span>Front-end</span> <br> Familiar with HTML, CSS, and JavaScript for frontend development.</li> 
+                    <li><span>Database</span> <br> Experienced with SQL for database management.</li> 
+                    <li><span>Version Control</span> <br> Proficient in using Git for version control.</li> 
+                </ul>
+            </div>
+            <div class="tab-contents" id="education">
+                <ul>
+                   <li><span>2020-2023</span> <br> Bachelor in computer application <br> College - <a class="education-link" href="https://uit-mkl.business.site/">University Institute of Technology, Malayinkeezhu</a> <br> University - <a class="education-link" href="https://www.keralauniversity.ac.in/home">University of Kerala</a> </li>
+                   <li><span>2019-2020</span> <br> Higher Secondary Education(12th) <br>School - <a class="education-link" href="https://trivandrumsap.kvs.ac.in/">kendriya vidyalaya sap,trivandrum (CBSE)</a></li> 
+                   <li><span>2017-2018</span> <br> Secondary Education(10th) <br>School - <a class="education-link" href="https://trivandrumsap.kvs.ac.in/">kendriya vidyalaya sap,trivandrum (CBSE)</a></li>
+                   <li><span></span></li>
+                   <li><span></span></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+ <!-------------------- project section---------------------- -->
+    <div class="projects" id="projects">
+        <div class="project-header">
+            <h1>My Projects</h1>
+        </div>
+    </div>
+   
+
+<!---------------------- Contact----------------------- -->
+    <div id="contact">
+        <div class="contact-header">
+            <div class="row">
+                <div class="contact-left">
+                    <h1>Contact Me</h1>
+                    <p ><i class="fa-regular fa-envelope"></i>akhilus321@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>9496553323</p>
+                    <div class="social-media">
+                        <a href=""><i class="fa-brands fa-square-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter"></i> </a>
+                        <a href=""><i class="fa-brands fa-square-github"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a class="btn" href="./AKHILUS.pdf" ><button >MY RESUME</button></a>
+                </div>
+                <div class="contact-right"> 
+                    <form action="">
+                        <input  id="contact-submit" type="text" placeholder="Your Name" required>
+                        <input id="contact-submit" type="email" placeholder="Your Email" required>
+                        <textarea name="message" id="contact-submit" rows="6" placeholder="Your Message" required></textarea>
+                        <input for="contact" class="contact-submit" type="button" value="submit" >
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/00bd3cc4b5.js" crossorigin="anonymous"></script>
+<script src="./script.js"></script>
+</body>
+</html>
