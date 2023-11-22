@@ -24,17 +24,18 @@ body{
     width: 100%;
     background-color:var(--clr-black)
 }
-.home-container{
-    padding: 10px 10%;
-    
-}
+
 nav{
-    /* width: 80%; */
+    width: 80%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* position: fixed;    
-    z-index:1; */
+    position: fixed;    
+    z-index:1;
+    background-color: var(--clr-black);
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 11vh;
 
 }
 nav a{
@@ -44,6 +45,7 @@ nav a h1{
     color: var(--clr-white);
     letter-spacing: 4px;
     font-size:30px;
+    
 }
 nav a h1 span{
     color: var(--clr-red); 
@@ -83,7 +85,9 @@ nav ul li a:hover::after{
 }
 
 .header-txt{
-    padding-top:18%;
+    padding-top:14%;
+    padding-left: 10%;
+    /* padding: 10px 10% ; */
 
 }
 .header-txt p{
@@ -220,9 +224,7 @@ nav ul li a:hover::after{
     background-color: var(--clr-black);
     padding: 10px 10%;
 }
-.project-header{
-    padding: 10px 10%;
-}
+
 .project-header h1{
     color: var(--clr-white);
     font-size: 50px;
