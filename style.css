@@ -17,6 +17,7 @@ html{
 
 body{
     font-family: 'Poppins', sans-serif;
+    color: var(--clr-white);
 }
 .header{
     height:100vh;   
@@ -25,13 +26,15 @@ body{
 }
 .home-container{
     padding: 10px 10%;
+    
 }
 nav{
+    /* width: 80%; */
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* position: fixed;
-    z-index: 2; */
+    /* position: fixed;    
+    z-index:1; */
 
 }
 nav a{
@@ -80,7 +83,7 @@ nav ul li a:hover::after{
 }
 
 .header-txt{
-    padding-top:15%;
+    padding-top:18%;
 
 }
 .header-txt p{
@@ -210,11 +213,12 @@ nav ul li a:hover::after{
     display: block;
 }
 
-/*--------------------- project part----------------------- */
-.projects{
+/*--------------------- project part-----------------------------------------------------------------*/
+.project_page{
     width: 100%;
     height: 100vh;
     background-color: var(--clr-black);
+    padding: 10px 10%;
 }
 .project-header{
     padding: 10px 10%;
@@ -223,6 +227,74 @@ nav ul li a:hover::after{
     color: var(--clr-white);
     font-size: 50px;
     margin-top: 5%;
+}
+.projects{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap:40px;
+    margin-top: 50px;
+
+}
+
+.project{
+    border-radius : 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.project img{
+    width: 100%;
+    height:45vh;
+    border-radius: 15px;
+    display: block;
+    transition: transform 0.5s;
+}
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 17px;
+    transition: height 0.5s;
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.layer a{
+    margin-top: 20px;
+    color: #ff004f;
+    text-decoration: none;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.project:hover img{
+    transform: scale(1.1);
+}
+
+.project:hover .layer{
+    height: 100%;
+}
+
+.btn{
+    margin-left: 45%;
+
 }
 
 /* ------------------------contact------------------------------- */
