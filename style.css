@@ -114,7 +114,7 @@ nav ul li a:hover::after{
 }
 
 
-/* ----------------------About----------------------------- */
+/* ----------------------About----------------------------------------------------------------- */
 
 .about{
     width: 100%;
@@ -152,7 +152,7 @@ nav ul li a:hover::after{
  .tab-titles p{
     color: var(--clr-white);
     font-size: 18px;
-    font-size: 600;
+    font-weight: 600;
  }
  .tab-links{
     margin-right: 50px;
@@ -392,13 +392,138 @@ form input,form textarea{
     border-radius: 6px;
 }
 
-/* --------- resonsive part----------------------------- */
+nav .fa-solid {
+    display: none;
+}
+
+/* -------------------------------- responsive for mobile phone ------------------------------------------------------------- */
+
 @media only screen and (max-width:600px){
-    .header-txt p{
+
+    nav .fa-solid{
+        display: block;
+        font-size: 25px;
+    }
+
+    nav{
+        position: relative;
+    }
+
+    nav ul{
+        background:#ff004f;
+        position:fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .header-txt{
+        /* padding-top: 55%; */
         font-size: 16px;
     }
-    .header-txt h1{
-        font-size: 30px;
+
+    .header-txt p{
+        margin-top: 30%;
+        font-size: 22px;
+        margin-bottom: 50px;
     }
-}
+
+    .header-txt h1{
+        font-size: 40px;
+     
+    }
+
+    .header-txt-2{
+        /* margin-top: 20px; */
+        margin-left: 65px;
+    }
+/* --------------------- About section ----------------------------------------------- */
+    .about-container{
+        padding: 10px 10%
+    }
+
+    .about-content-text{
+        margin: 10px 7% 10px 10%;
+    }
+
+    .about-container h1{
+        font-size: 40px;   
+        text-align: center;
+
+    }
+
+    .about-content-text p{
+        font-size: 12px;
+        padding-top: 12px;
+    }
+
+    .tab-titles p{
+        font-size: 16px;
+    }
+
+    .tab-contents{
+        padding: 10px 10px;
+    }
+
+    .tab-contents ul li{
+        font-size: 12px;
+    }
+
+    .tab-contents ul li span{
+        font-size: 15px;
+    }
+
+/* --------------------- project section ---------------------- */
+
+    .project_page{
+        padding: 10px 10%;
+        height: fit-content;
+    }
+
+    .project-header h1{
+        font-size: 40px;
+        text-align: center;
+        
+    }
+    .project img{
+        margin: 0 20% 0 5%;
+        height: 35vh;
+        width: 90%;
+    }
+    .layer{
+        font-size: 13px;
+    }
+
+    .btn{
+        margin-left: 25%;
+    }
+/* ----------------------- contact section --------------------- */
+
+    .row{
+        display:flex ;
+        flex-direction: column;
+    }
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+    .resume{
+        margin: 0;
+        
+    }
+}   
     
