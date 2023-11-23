@@ -357,6 +357,12 @@ a button{
     border-radius: 6px;
     transition: background 0.5s;
 }
+
+.resume{
+    margin-left: 0;
+    margin-top: 0;
+}
+
 a button:hover{
     background-color: #e11d48;
 }
