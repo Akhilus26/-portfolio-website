@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="AKHIL U S - Software Developer portfolio built with a VS Code inspired interactive interface."
+    />
+    <meta
+      name="keywords"
+      content="AKHIL U S, Software Developer, Python, Django, React, Portfolio, Trivandrum"
+    />
+    <meta name="author" content="AKHIL U S" />
+    <meta property="og:title" content="AKHIL U S | Software Developer" />
+    <meta property="og:description" content="Interactive VS Code themed developer portfolio." />
+    <meta property="og:image" content="assets/dev-visual.png" />
+    <title>AKHIL U S | Software Developer</title>
+    <link rel="preload" as="image" href="assets/dev-visual.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="loader" id="loader" aria-label="Loading portfolio">
+      <div class="loader-mark">A</div>
+      <span>Booting portfolio...</span>
+    </div>
+
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true"></div>
+    <canvas id="particles" aria-hidden="true"></canvas>
+
+    <div class="workspace">
+      <header class="titlebar">
+        <div class="traffic" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+        <nav class="menu" aria-label="Main navigation">
+          <a href="#home">Home</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <p>AKHIL U S - Visual Studio Code</p>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </header>
+
+      <aside class="activitybar" aria-label="Activity shortcuts">
+        <button class="active" data-panel="explorer" title="Explorer">⌘</button>
+        <button data-file="projects.ts" title="Projects">{ }</button>
+        <button data-file="skills.json" title="Skills">#</button>
+        <button data-file="contact.js" title="Contact">@</button>
+        <a href="assets/Akhil_US_Resume.pdf" download title="Download resume">↓</a>
+      </aside>
+
+      <aside class="explorer" id="explorer">
+        <div class="explorer-head">
+          <span>EXPLORER</span>
+          <button id="themeToggle" aria-label="Toggle theme">☼</button>
+        </div>
+        <div class="folder">PORTFOLIO</div>
+        <button class="file active" data-file="about.js"><span class="js"></span>about.js</button>
+        <button class="file" data-file="skills.json"><span class="json"></span>skills.json</button>
+        <button class="file" data-file="projects.ts"><span class="ts"></span>projects.ts</button>
+        <button class="file" data-file="experience.md"><span class="md"></span>experience.md</button>
+        <button class="file" data-file="certifications.md"><span class="md"></span>certifications.md</button>
+        <a class="file" href="assets/Akhil_US_Resume.pdf" download><span class="pdf"></span>resume.pdf</a>
+        <button class="file" data-file="contact.js"><span class="js"></span>contact.js</button>
+      </aside>
+
+      <main class="editor">
+        <div class="tabs" id="tabs" aria-label="Open files"></div>
+
+        <section class="editor-pane" id="home">
+          <div class="line-numbers" aria-hidden="true"></div>
+          <div class="code-surface">
+            <section class="hero reveal">
+              <div class="hero-copy">
+                <p class="crumb">portfolio / about.js</p>
+                <h1>AKHIL U S</h1>
+                <h2><span id="typing"></span></h2>
+                <p>
+                  Aspiring software developer with hands-on full-stack experience using Django,
+                  React, REST APIs, and AI-driven application ideas.
+                </p>
+                <div class="hero-actions">
+                  <a href="#projects" class="primary">View Work</a>
+                  <a href="#contact" class="ghost">Contact Me</a>
+                  <a href="assets/Akhil_US_Resume.pdf" download class="ghost">Resume</a>
+                </div>
+                <div class="socials" aria-label="Social links">
+                  <a href="https://github.com/Akhilus26" title="GitHub">GH</a>
+                  <a href="https://linkedin.com/in/akhilus" title="LinkedIn">in</a>
+                  <a href="mailto:akhilus321@gmail.com" title="Email">@</a>
+                  <a href="assets/Akhil_US_Resume.pdf" download title="Resume">CV</a>
+                </div>
+              </div>
+              <div class="hero-visual" data-parallax>
+                <img src="assets/dev-visual.png" alt="Abstract developer coding visual" />
+                <div class="glass-card">
+                  <strong>Available for Work</strong>
+                  <span>Trivandrum, Kerala</span>
+                </div>
+              </div>
+            </section>
+
+            <section class="file-view reveal" id="fileView" aria-live="polite"></section>
+
+            <section class="stats reveal" aria-label="Portfolio statistics">
+              <article><strong data-count="5">0</strong><span>Languages</span></article>
+              <article><strong data-count="6">0</strong><span>Projects</span></article>
+              <article><strong data-count="2">0</strong><span>Degrees</span></article>
+              <article><strong data-count="71">0</strong><span>NPTEL Score</span></article>
+            </section>
+
+            <section class="projects reveal" id="projects">
+              <div class="section-head">
+                <p>projects.ts</p>
+                <h2>Project Workspace</h2>
+              </div>
+              <div class="project-shell">
+                <aside class="project-explorer" aria-label="Project explorer">
+                  <div class="project-explorer-head">
+                    <span>PROJECTS</span>
+                    <strong>6</strong>
+                  </div>
+                  <input id="projectSearch" type="search" placeholder="Search projects" aria-label="Search projects" />
+                  <div class="filters" id="filters"></div>
+                  <div class="featured-list">
+                    <p>FEATURED</p>
+                    <button data-featured="Block Rent">Block Rent</button>
+                    <button data-featured="Smart Ride">Smart Ride</button>
+                    <button data-featured="Smart Ration Distribution System">Smart Ration</button>
+                  </div>
+                </aside>
+
+                <div class="project-editor">
+                  <div class="project-tabs" id="projectTabs"></div>
+                  <div class="tech-float" id="techFloat" aria-hidden="true"></div>
+                  <div class="featured-projects" id="featuredProjects"></div>
+                  <div class="project-grid" id="projectGrid"></div>
+                  <div class="project-detail" id="projectDetail"></div>
+                  <div class="project-timeline" id="projectTimeline"></div>
+                  <div class="contrib project-heatmap" aria-label="GitHub style contribution heatmap">
+                    <div class="section-head">
+                      <p>github.md</p>
+                      <h2>Project Activity</h2>
+                    </div>
+                    <div class="contrib-grid" id="contribGrid"></div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="skills-section reveal" id="skills">
+              <div class="section-head">
+                <p>skills.json</p>
+                <h2>Technical Skills</h2>
+              </div>
+              <div class="skills-grid" id="skillsGrid"></div>
+            </section>
+
+            <section class="timeline reveal" id="experience">
+              <div class="section-head">
+                <p>experience.md</p>
+                <h2>Experience & Education</h2>
+              </div>
+              <div class="timeline-list">
+                <article>
+                  <span>2023-2024</span>
+                  <h3>Python Full Stack Developer Intern</h3>
+                  <p>Quest Innovative Solutions</p>
+                  <p>Django applications, REST APIs, frontend integration, debugging, and database operations.</p>
+                </article>
+                <article>
+                  <span>2024-2026</span>
+                  <h3>MCA</h3>
+                  <p>APJ Abdul Kalam Technological University</p>
+                </article>
+                <article>
+                  <span>2020-2023</span>
+                  <h3>BCA</h3>
+                  <p>University of Kerala</p>
+                </article>
+                <article>
+                  <span>Jan-Apr 2025</span>
+                  <h3>Elite NPTEL Certification in Cloud Computing</h3>
+                  <p>IIT Kharagpur | Score: 71%</p>
+                </article>
+              </div>
+            </section>
+
+            <div class="project-modal" id="projectModal" aria-hidden="true" role="dialog" aria-label="Project details">
+              <div class="project-modal-panel">
+                <button class="modal-close" id="modalClose" aria-label="Close project modal">×</button>
+                <div id="modalContent"></div>
+              </div>
+            </div>
+
+            <section class="terminal reveal" aria-label="Interactive terminal">
+              <div class="terminal-top">
+                <span></span><span></span><span></span>
+                <p>akhil@portfolio:~</p>
+              </div>
+              <div class="terminal-body" id="terminalBody">
+                <p><span>&gt;</span> whoami</p>
+                <p>Software Developer</p>
+              </div>
+              <form id="terminalForm">
+                <label for="terminalInput">&gt;</label>
+                <input
+                  id="terminalInput"
+                  autocomplete="off"
+                  placeholder="try skills, education, contact, projects, clear"
+                />
+              </form>
+            </section>
+
+            <section class="contact reveal" id="contact">
+              <div class="section-head">
+                <p>contact.js</p>
+                <h2>Contact</h2>
+              </div>
+              <div class="contact-layout">
+                <div>
+                  <p>Phone: <a href="tel:+919496553323">+91 9496553323</a></p>
+                  <p>Email: <a href="mailto:akhilus321@gmail.com">akhilus321@gmail.com</a></p>
+                  <p>LinkedIn: <a href="https://linkedin.com/in/akhilus">linkedin.com/in/akhilus</a></p>
+                  <p>GitHub: <a href="https://github.com/Akhilus26">github.com/Akhilus26</a></p>
+                </div>
+                <form class="contact-form" action="mailto:akhilus321@gmail.com" method="post" enctype="text/plain">
+                  <input name="name" placeholder="Name" required />
+                  <input name="email" type="email" placeholder="Email" required />
+                  <textarea name="message" placeholder="Message" required></textarea>
+                  <button type="submit">Send Message</button>
+                </form>
+              </div>
+            </section>
+          </div>
+        </section>
+      </main>
+
+      <footer class="statusbar">
+        <span>Python</span>
+        <span>React</span>
+        <span>Django</span>
+        <span>Git</span>
+        <span>Portfolio v1.0</span>
+        <strong>Available for Work</strong>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
